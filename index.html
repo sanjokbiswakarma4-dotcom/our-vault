@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RASHITA × SANJOK 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- BACKGROUND UPLOAD -->
+<input type="file" id="bgUpload" accept="image/*" onchange="setBackground(event)">
+
+<div class="hero">
+  <div class="overlay"></div>
+  <h1>RASHITA × SANJOK</h1>
+</div>
+
+<!-- NAV FOLDERS -->
+<div class="nav">
+  <button onclick="openFolder('music')">🎵 Music</button>
+  <button onclick="openFolder('notes')">💌 Notes</button>
+  <button onclick="openFolder('photos')">🖼 Images</button>
+  <button onclick="openFolder('moods')">🌙 Moods</button>
+  <button onclick="openFolder('med')">🧘 Meditation</button>
+</div>
+
+<div class="container">
+
+  <!-- MUSIC -->
+  <div id="music" class="folder active">
+    <h2>Music Library</h2>
+    <input type="file" id="songUpload" accept="audio/*" multiple>
+    <button onclick="saveSongs()">Upload Songs</button>
+    <div id="songList"></div>
+    <audio id="player" controls></audio>
+  </div>
+
+  <!-- NOTES -->
+  <div id="notes" class="folder">
+    <h2>Love Notes</h2>
+    <textarea id="noteInput"></textarea>
+    <button onclick="saveNote()">Save</button>
+    <div id="noteList"></div>
+  </div>
+
+  <!-- PHOTOS -->
+  <div id="photos" class="folder">
+    <h2>Image Folder</h2>
+    <input type="file" id="photoUpload" accept="image/*" multiple>
+    <button onclick="savePhotos()">Upload Images</button>
+    <div id="photoGrid"></div>
+  </div>
+
+  <!-- MOODS -->
+  <div id="moods" class="folder">
+    <h2>Moods</h2>
+    <button onclick="setMood('romantic')">💖 Romantic</button>
+    <button onclick="setMood('sad')">🌧 Sad</button>
+    <button onclick="setMood('happy')">☀ Happy</button>
+    <div id="moodText"></div>
+  </div>
+
+  <!-- MEDITATION -->
+  <div id="med" class="folder">
+    <h2>Meditation</h2>
+    <button onclick="startTimer()">Start 60s</button>
+    <div id="time"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
