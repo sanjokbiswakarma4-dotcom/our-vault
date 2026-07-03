@@ -2,13 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
+// Replace these values with YOUR Firebase project configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDu4MeaOjKHomp4BZupQEnEafWsJtymMME",
+  apiKey: "YOUR_API_KEY",
   authDomain: "our-vault-7528f.firebaseapp.com",
   projectId: "our-vault-7528f",
-  storageBucket: "our-vault-7528f.firebasestorage.app",
-  messagingSenderId: "1078508669520",
-  appId: "1:1078508669520:web:d6d5faf285dbddaa455f55"
+  storageBucket: "our-vault-7528f.appspot.com",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
 const app = initializeApp(firebaseConfig);
