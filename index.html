@@ -71,6 +71,31 @@
 
 </div>
 
-<script src="script.js"></script>
+<!-- FIREBASE -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDu4MeaOjKHomp4BZupQEnEafWsJtymMME",
+    authDomain: "our-vault-7528f.firebaseapp.com",
+    projectId: "our-vault-7528f",
+    storageBucket: "our-vault-7528f.appspot.com",
+    messagingSenderId: "1078508669520",
+    appId: "1:1078508669520:web:d6d5faf285dbddaa455f55"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Make Firestore available globally
+  window.db = db;
+
+  console.log("🔥 Firebase connected");
+</script>
+
+<!-- YOUR MAIN SCRIPT -->
+<script src="./script.js"></script>
+
 </body>
 </html>
